@@ -46,7 +46,7 @@
                 
                 combo_tab {
                         timeout-ms = <50>;
-                        key-positions = <13 14>;
+                        key-positions = <12 13>;
                         bindings = <&kp TAB>;
                         layers = <0>;
                 };
@@ -54,7 +54,7 @@
                 
                 combo_esc {
                         timeout-ms = <50>;
-                        key-positions = <3 4>;
+                        key-positions = <2 3>;
                         bindings = <&kp ESC>;
                         layers = <0>;
                 };
@@ -80,13 +80,13 @@
 
                 nav_layer {
 /*
-        | ESC |     |     |     |     |        | HME | DWN | UP  | END |     |
+        | ESC | AF4 |     |     |     |        | HME | DWN | UP  | END |     |
         | WIN | ALT | SFT | CTL |     |        | <-  |  ^  |  v  | ->  |     |
         |     |     |     |     |     |        |     | BSP | DEL |     |     |
                     |     |     |     |        |     |     |     | 
 */
                         bindings = <
-   &kp ESC    &none     &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+   &kp ESC    LA(F4)    &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
    &kp LGUI   &kp LALT  &kp LSHFT  &kp LCTRL  &none  /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
    &none      &none     &none      &none      &none  /**/   &none      &kp BSPC   &kp DEL   &none      &none
                         &none      &none      &none  /**/   &none      &none      &none
