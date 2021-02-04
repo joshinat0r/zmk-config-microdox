@@ -103,10 +103,10 @@
                     |     |     |     |        |     |     |     | 
 */
                         bindings = <
-   &kp GRAVE  &kp DLLR  &kp EXCL   &kp LBRC   &kp RBRC   /**/   &none      &none      &none      &none      &none
-   &kp BSLH   &kp HASH  &kp AMPS   &kp LPAR   &kp RPAR   /**/   &none      &none      &none      &none      &none
-   &kp MINUS  &kp UNDER &kp PIPE   &kp LBKT   &kp RBKT   /**/   &none      &kp LC(Z)  &kp LC(C)  &kp LC(V)  &none
-                        &none      &none      &none      /**/   &none      &none      &none
+   &kp GRAVE  &kp DLLR  &kp EXCL   &kp LBRC   &kp RBRC   /**/   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR
+   &kp BSLH   &kp HASH  &kp AMPS   &kp LPAR   &kp RPAR   /**/   &none         &none         &none          &none         &none
+   &kp MINUS  &kp UNDER &kp PIPE   &kp LBKT   &kp RBKT   /**/   &none         &kp LC(Z)     &kp LC(C)      &kp LC(V)     &none
+                        &none      &none      &none      /**/   &none         &none         &none
                         >;
                 };
 
