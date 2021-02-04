@@ -46,8 +46,16 @@
                 
                 combo_tab {
                         timeout-ms = <50>;
-                        key-positions = <0 1>;
+                        key-positions = <10 11>;
                         bindings = <&kp TAB>;
+                        layers = <0>;
+                };
+                
+                
+                combo_esc {
+                        timeout-ms = <50>;
+                        key-positions = <0 1>;
+                        bindings = <&kp ESC>;
                         layers = <0>;
                 };
         };
@@ -65,7 +73,7 @@
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
    &hm LGUI  A    &hm LALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm RALT L   &hm RGUI SQT
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SEMI
-                                &kp ESC  &lt NAV BSPC &lt NUM DEL /**/    &lt FUNC ENTER  &lt SYM SPACE   &kp TAB
+                                &kp ESC  &lt NAV BSPC &lt NUM DEL   /**/    &lt FUNC ENTER  &lt SYM SPACE   &kp TAB
                         >;
                 };
 
@@ -74,13 +82,13 @@
 /*
         | ESC |     |     |     |     |        | HME | DWN | UP  | END |     |
         | WIN | ALT | SFT | CTL |     |        | <-  |  ^  |  v  | ->  |     |
-        |     |     |     |     |     |        |     |     |     |     |     |
+        |     |     |     |     |     |        |     | BSP | DEL |     |     |
                     |     |     |     |        |     |     |     | 
 */
                         bindings = <
    &kp ESC    &none     &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
    &kp LGUI   &kp LALT  &kp LSHFT  &kp LCTRL  &none  /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-   &none      &none     &none      &none      &none  /**/   &none      &none      &none      &none      &none
+   &none      &none     &none      &none      &none  /**/   &none      &kp BSPC   &kp DEL   &none      &none
                         &none      &none      &none  /**/   &none      &none      &none
                         >;
                 };
