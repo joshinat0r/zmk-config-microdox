@@ -86,10 +86,10 @@
                     |     |     |     |        |     |     |     | 
 */
                         bindings = <
-   &kp ESC    LA(F4)    &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-   &kp LGUI   &kp LALT  &kp LSHFT  &kp LCTRL  &none  /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-   &none      &none     &none      &none      &none  /**/   &none      &kp BSPC   &kp DEL   &none      &none
-                        &none      &none      &none  /**/   &none      &none      &none
+   &kp ESC    &kp LA(F4) &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+   &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none  /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+   &none      &none      &none      &none      &none  /**/   &none      &kp BSPC   &kp DEL   &none      &none
+                         &none      &none      &none  /**/   &none      &none      &none
                         >;
                 };
 
