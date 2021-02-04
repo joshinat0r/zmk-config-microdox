@@ -43,6 +43,13 @@
                         bindings = <&kp BSLH>;
                         layers = <0>;
                 };
+                
+                combo_tab {
+                        timeout-ms = <50>;
+                        key-positions = <0 1>;
+                        bindings = <&kp TAB>;
+                        layers = <0>;
+                };
         };
 
         keymap {
