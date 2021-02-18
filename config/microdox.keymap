@@ -22,7 +22,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
-                        tapping_term_ms = <250>;
+                        tapping_term_ms = <180>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
@@ -45,7 +45,7 @@
                 };
                 
                 combo_tab {
-                        timeout-ms = <50>;
+                        timeout-ms = <100>;
                         key-positions = <12 13>;
                         bindings = <&kp TAB>;
                         layers = <0>;
@@ -53,7 +53,7 @@
                 
                 
                 combo_esc {
-                        timeout-ms = <50>;
+                        timeout-ms = <100>;
                         key-positions = <2 3>;
                         bindings = <&kp ESC>;
                         layers = <0>;
