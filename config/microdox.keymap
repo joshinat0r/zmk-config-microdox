@@ -26,6 +26,13 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
+                
+                macro_1: macro_1 {
+			compatible = "zmk,behavior-macro";
+			label = "MACRO_1";
+			#binding-cells = <0>;
+			bindings = <&kp A>, <&kp B>;
+		};
         };
 
         combos {
@@ -80,16 +87,16 @@
 
                 nav_layer {
 /*
-        | ESC | AF4 |     |     |     |        | HME | DWN | UP  | END |     |
+        | ESC | AF4 |     |     |  m1 |        | HME | DWN | UP  | END |     |
         | WIN | ALT | SFT | CTL |     |        | <-  |  ^  |  v  | ->  |     |
         |     |     |     |     |     |        |     | BSP | DEL |     |     |
                     |     |     |     |        |     |     |     | 
 */
                         bindings = <
-   &kp ESC    &kp LA(F4) &none      &none      &none  /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
-   &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none  /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
-   &none      &none      &none      &none      &none  /**/   &kp BSPC   &kp DEL    &kp LC(C)  &kp LC(V)  &none
-                         &none      &none      &none  /**/   &kp SPACE  &kp SPACE  &none
+   &kp ESC    &kp LA(F4) &none      &none      &macro_1 /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+   &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none    /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &none
+   &none      &none      &none      &none      &none    /**/   &kp BSPC   &kp DEL    &kp LC(C)  &kp LC(V)  &none
+                         &none      &none      &none    /**/   &kp SPACE  &kp SPACE  &none
                         >;
                 };
 
