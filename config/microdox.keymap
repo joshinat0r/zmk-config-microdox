@@ -14,6 +14,7 @@
 #define NUM 2
 #define SYM 3
 #define FUNC 4
+#define WIN 5
 
 / {
 
@@ -28,11 +29,11 @@
                 };
                 
                 macro_1: macro_1 {
-			compatible = "zmk,behavior-macro";
-			label = "MACRO_1";
-			#binding-cells = <0>;
-			bindings = <&kp A>, <&kp B>;
-		};
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO_1";
+                        #binding-cells = <0>;
+                        bindings = <&kp P>, <&kp A>, <&kp I>, <&kp N>;
+                };
         };
 
         combos {
@@ -78,7 +79,7 @@
 //             |  -  | BSP | DEL |   | ENT | SPC  | ALT |
                         bindings = <
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
-   &hm LGUI  A    &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SQT
+   &lt WIN A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SQT
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SEMI
                                 &kp LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE   &mo NAV
                         >;
@@ -88,7 +89,7 @@
                 nav_layer {
 /*
         | ESC | AF4 |     |     |  m1 |        | HME | DWN | UP  | END |     |
-        | WIN | ALT | SFT | CTL |     |        | <-  |  ^  |  v  | ->  |     |
+        | WIN | ALT | SFT | CTL |     |        | <-  |  v  |  ^  | ->  |     |
         |     |     |     |     |     |        |     | BSP | DEL |     |     |
                     |     |     |     |        |     |     |     | 
 */
@@ -145,6 +146,21 @@
    &kp F11    &kp F4    &kp F5     &kp F6     &none  /**/   &none      &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
    &kp F10    &kp F1    &kp F2     &kp F3     &none  /**/   &none      &none      &none      &none      &none
                         &none      &none      &none  /**/   &none      &none      &none
+                        >;
+                };
+
+                win_layer {
+/* Layer for WM Shortcuts
+        |     |     |     |     |     |        |     |     |     |     |     |
+        |     | ALT | SFT | CTL |     |        | D1  |  D2 | D3  | D4  |  D5 |
+        |     |     |     |     |     |        |  L  |  M  | R   |     |     |
+                    |     |     |     |        |     |     |     | 
+*/
+                        bindings = <
+   &none      &none      &none      &none      &none    /**/   &none      &none      &none      &none      &none
+   &none      &kp LALT   &kp LSHFT  &kp LCTRL  &none    /**/   &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
+   &none      &none      &none      &none      &none    /**/   &kp LA(Z)  &kp LA(X)  &kp LA(C)  &none      &none
+                         &none      &none      &none    /**/   &kp SPACE  &kp SPACE  &none
                         >;
                 };
         };
